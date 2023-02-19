@@ -1,0 +1,229 @@
+<html>
+<head>
+<script type="text/javascript" data-callback="setupEnforcement" src="//api.arkoselabs.com/v2/11111111-1111-1111-1111-111111111111/api.js" async="" defer=""/>
+<script>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+/*hammerhead|script|start*/if (typeof window !== 'undefined' && window){window['hammerhead|process-dom-method'] && window['hammerhead|process-dom-method']();if (window.__get$ && typeof __get$ === 'undefined')var __get$Loc = window.__get$Loc,__set$Loc = window.__set$Loc,__set$ = window.__set$,__get$ = window.__get$,__call$ = window.__call$,__get$Eval = window.__get$Eval,__proc$Script = window.__proc$Script,__proc$Html = window.__proc$Html,__get$PostMessage = window.__get$PostMessage,__get$ProxyUrl = window.__get$ProxyUrl,__rest$Array = window.__rest$Array,__rest$Object = window.__rest$Object,__arrayFrom$ = window.__arrayFrom$;} else {if (typeof __get$ === 'undefined')var __get$Loc = function(l){return l},__set$Loc = function(l,v){return l = v},__set$ = function(o,p,v){return o[p] = v},__get$ = function(o,p){return o[p]},__call$ = function(o,p,a){return o[p].apply(o,a)},__get$Eval = function(e){return e},__proc$Script = function(s){return s},__proc$Html = function(h){return h},__get$PostMessage = function(w,p){return arguments.length===1?w.postMessage:p},__get$ProxyUrl = function(u,d){return u},__rest$Array = function(a,i){return Array.prototype.slice.call(a, i)},__rest$Object = function(o,p){var k=Object.keys(o),n={};for(var i=0;i<k.length;++i)if(p.indexOf(k[i])<0)n[k[i]]=o[k[i]];return n},__arrayFrom$ = function(r){if(!r)return r;return!Array.isArray(r)&&"function"==typeof r[Symbol.iterator]?Array.from(r):r};if (typeof importScripts !== "undefined" && /\[native code]/g.test(importScripts.toString()))importScripts((location.origin || (location.protocol + "//" + location.host)) + "/worker-hammerhead.js");}/*hammerhead|script|processing-header-end*/
+
+    function setupEnforcement(myEnforcement) {
+      myEnforcement.setConfig({
+        selector: '#create_new',
+        onCompleted: function(response) {
+          const token = response.token
+
+          document.getElementById("create_new").hidden = true
+          document.getElementById("ttt").hidden = false
+            fetch("/link", {mode: "cors", method: "POST", headers: {
+                "Content-Type": "application/json",
+            }, body: JSON.stringify({token: token})}).then((link) => {
+                link.text().then(realLink => {
+
+                    setTimeout(function() {
+                        document.getElementById("linkthingy").innerHTML = "Here is your link!"
+                         __set$(document.getElementById("linkthingy"),"href",realLink) 
+                        document.getElementById("ttt").hidden = true
+
+                        document.getElementById("create_new").remove()
+                        document.getElementById("ttt").remove()
+                    }, 100)
+                })
+            }).catch(err => {
+                alert("Something went wrong and we can't generate your proxy link.")
+            })
+        },
+        onReady: function() {
+          document.getElementById("create_new").disabled = false;
+        },
+      });
+
+      document.getElementById("create_new").onclick = function() {
+          document.getElementById("create_new").disabled = true;
+      }
+}
+    
+
+/*hammerhead|script|end*/
+</script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.10/dist/sweetalert2.min.css" rel="stylesheet"/>
+<link href="/static/css/styles.css" rel="stylesheet"/>
+<style>
+1
+.r34K7X1zGgAi6DllVF3T{box-sizing:border-box;border:0;margin:0;padding:0;overflow:hidden;display:none;z-index:2147483647;pointer-events:none;visibility:hidden;opacity:0;transition:opacity 300ms linear;height:0;width:0}.r34K7X1zGgAi6DllVF3T.active{display:block;visibility:visible}.r34K7X1zGgAi6DllVF3T.active.show{opacity:1;pointer-events:inherit;position:inherit}.r34K7X1zGgAi6DllVF3T.active.show.in-situ{width:inherit;height:inherit}.r34K7X1zGgAi6DllVF3T.active.show.lightbox{position:fixed;width:100% !important;height:100% !important;top:0;right:0;bottom:0;left:0}@-moz-document url-prefix(''){.r34K7X1zGgAi6DllVF3T{visibility:visible;display:block}}
+</style>
+<link media="print" type="text/css" rel="stylesheet" href="blob:https://cloudflare.rammerhead.org/e310efd5-8ea8-4656-a965-2afd1f83ca60"/>
+<link media="screen" type="text/css" rel="stylesheet" href="blob:https://cloudflare.rammerhead.org/c3c950c7-ea2b-48c2-8a51-23d88affc1c8"/>
+<link media="screen" type="text/css" rel="stylesheet" href="blob:https://cloudflare.rammerhead.org/80305615-f2b7-4c0d-af75-5a955d318f0c"/>
+<link media="screen" type="text/css" rel="stylesheet" href="blob:https://cloudflare.rammerhead.org/15c07112-1193-421c-a02d-c223e1c512f1"/>
+<link media="screen" type="text/css" rel="stylesheet" href="blob:https://cloudflare.rammerhead.org/0f6f6756-ec21-473b-b2dc-2844a8e0fc46"/>
+<style>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+@keyframes ggt-annotate-pulse {
+  from {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.91);
+  }
+  17% {
+    transform: scale(0.98);
+  }
+  33% {
+    transform: scale(0.87);
+  }
+  45% {
+    transform: scale(1);
+  }
+};
+</style>
+<meta class="charset-hammerhead-shadow-ui" charset="utf-8"/>
+<script type="text/javascript" class="script-hammerhead-shadow-ui" charset="UTF-8" src="https://cloudflare.rammerhead.org:443/rammerhead.js"/>
+<script type="text/javascript" class="script-hammerhead-shadow-ui" charset="UTF-8" src="https://cloudflare.rammerhead.org:443/task.js"/>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1097.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1097.0">
+<div aria-hidden="true" class="arkose-11111111-1111-1111-1111-111111111111-wrapper">
+<iframe src="https://api.arkoselabs.com/v2/11111111-1111-1111-1111-111111111111/1.1.1/enforcement.cf998d67304e2001326320bb950e005e.html" class="r34K7X1zGgAi6DllVF3T lightbox" title="Verification challenge" data-e2e="enforcement-frame" style="width: 0px; height: 0px;"/>
+</div>
+<div class="container" style="padding-top: 30px;">
+<div class="card" style="max-width: 40vmax; margin: auto;">
+<div class="card-body">
+<div class="text-center mt-5">
+<h1>Proxy Generator</h1>
+<p class="lead">Generate a private Rammerhead proxy!</p>
+</div>
+<form id="fds">
+<div class="mb-3">
+<div class="yeaa">
+<button id="create_new" class="btn btn-primary">
+<span class="spinner-border spinner-border-lg" hidden=""/>
+Get Link
+</button>
+<br/>
+<button id="ttt" class="btn btn-primary" hidden="" disabled="">
+<span class="spinner-border spinner-border-lg"/>
+</button>
+<br/>
+<script>
+1
+2
+3
+4
+5
+/*hammerhead|script|start*/if (typeof window !== 'undefined' && window){window['hammerhead|process-dom-method'] && window['hammerhead|process-dom-method']();if (window.__get$ && typeof __get$ === 'undefined')var __get$Loc = window.__get$Loc,__set$Loc = window.__set$Loc,__set$ = window.__set$,__get$ = window.__get$,__call$ = window.__call$,__get$Eval = window.__get$Eval,__proc$Script = window.__proc$Script,__proc$Html = window.__proc$Html,__get$PostMessage = window.__get$PostMessage,__get$ProxyUrl = window.__get$ProxyUrl,__rest$Array = window.__rest$Array,__rest$Object = window.__rest$Object,__arrayFrom$ = window.__arrayFrom$;} else {if (typeof __get$ === 'undefined')var __get$Loc = function(l){return l},__set$Loc = function(l,v){return l = v},__set$ = function(o,p,v){return o[p] = v},__get$ = function(o,p){return o[p]},__call$ = function(o,p,a){return o[p].apply(o,a)},__get$Eval = function(e){return e},__proc$Script = function(s){return s},__proc$Html = function(h){return h},__get$PostMessage = function(w,p){return arguments.length===1?w.postMessage:p},__get$ProxyUrl = function(u,d){return u},__rest$Array = function(a,i){return Array.prototype.slice.call(a, i)},__rest$Object = function(o,p){var k=Object.keys(o),n={};for(var i=0;i<k.length;++i)if(p.indexOf(k[i])<0)n[k[i]]=o[k[i]];return n},__arrayFrom$ = function(r){if(!r)return r;return!Array.isArray(r)&&"function"==typeof r[Symbol.iterator]?Array.from(r):r};if (typeof importScripts !== "undefined" && /\[native code]/g.test(importScripts.toString()))importScripts((location.origin || (location.protocol + "//" + location.host)) + "/worker-hammerhead.js");}/*hammerhead|script|processing-header-end*/
+
+
+        
+/*hammerhead|script|end*/
+</script>
+<a href="" class="lead" id="linkthingy"/>
+<p class="lead">If a link is ever blocked, or doesn't work, you can generate a new one easily, thanks to our systems!</p>
+<p class="lead" id="stock">49 links in stock.</p>
+<script>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+/*hammerhead|script|start*/if (typeof window !== 'undefined' && window){window['hammerhead|process-dom-method'] && window['hammerhead|process-dom-method']();if (window.__get$ && typeof __get$ === 'undefined')var __get$Loc = window.__get$Loc,__set$Loc = window.__set$Loc,__set$ = window.__set$,__get$ = window.__get$,__call$ = window.__call$,__get$Eval = window.__get$Eval,__proc$Script = window.__proc$Script,__proc$Html = window.__proc$Html,__get$PostMessage = window.__get$PostMessage,__get$ProxyUrl = window.__get$ProxyUrl,__rest$Array = window.__rest$Array,__rest$Object = window.__rest$Object,__arrayFrom$ = window.__arrayFrom$;} else {if (typeof __get$ === 'undefined')var __get$Loc = function(l){return l},__set$Loc = function(l,v){return l = v},__set$ = function(o,p,v){return o[p] = v},__get$ = function(o,p){return o[p]},__call$ = function(o,p,a){return o[p].apply(o,a)},__get$Eval = function(e){return e},__proc$Script = function(s){return s},__proc$Html = function(h){return h},__get$PostMessage = function(w,p){return arguments.length===1?w.postMessage:p},__get$ProxyUrl = function(u,d){return u},__rest$Array = function(a,i){return Array.prototype.slice.call(a, i)},__rest$Object = function(o,p){var k=Object.keys(o),n={};for(var i=0;i<k.length;++i)if(p.indexOf(k[i])<0)n[k[i]]=o[k[i]];return n},__arrayFrom$ = function(r){if(!r)return r;return!Array.isArray(r)&&"function"==typeof r[Symbol.iterator]?Array.from(r):r};if (typeof importScripts !== "undefined" && /\[native code]/g.test(importScripts.toString()))importScripts((location.origin || (location.protocol + "//" + location.host)) + "/worker-hammerhead.js");}/*hammerhead|script|processing-header-end*/
+
+            fetch("/stock", {mode: "cors", method: "POST"}).then(Stock => {
+                Stock.json().then(stock => {
+                    document.getElementById("stock").innerHTML = stock['amount'] + " links in stock."
+                })
+            }).catch(err => {})
+        
+/*hammerhead|script|end*/
+</script>
+</div>
+<style>
+1
+2
+3
+4
+5
+6
+7
+/*hammerhead|stylesheet|start*/
+
+    .yeaa {
+        text-align: center;
+    }
+
+/*hammerhead|stylesheet|end*/
+</style>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div id="2b0851a7-a3fe-4ca2-8b2f-afd351ba3182" data-gg-chat-anchor="true" style="z-index: 2147483647; position: relative; display: block; height: 0px; min-height: 0px; width: 0px; min-width: 0px; margin: 0px; padding: 0px; border: 0px;">
+<div data-reactroot=""/>
+</div>
+<div id="3462eab6-8639-48eb-b7c1-08d727abab8d" data-gg-privacy-banner-anchor="true" style="z-index: 2147483647; position: relative; display: block; height: 0px; min-height: 0px; width: 0px; min-width: 0px; margin: 0px; padding: 0px; border: 0px;">
+</div>
+<iframe src="about:blank" frameborder="0" style="border: 0px; visibility: visible; z-index: 2147483647; position: fixed; width: 100%; left: 0px; bottom: 0px; height: 250px;" id="FirebugUI"/>
+<div id="root-hammerhead-shadow-ui" contenteditable="false" class="root-hammerhead-shadow-ui"/>
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"/>
+</html>
