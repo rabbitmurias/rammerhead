@@ -1,0 +1,3 @@
+gh repo clone binary-person/rammerhead
+npm install
+npm run build
